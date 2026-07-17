@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AsyncPaginate } from 'react-select-async-paginate'
+import { GEOCODING_API_URL, WEATHER_API_KEY } from '../api';
 
 const Search = ({ onSearchChange }) => {
     const [search, setSearch] = useState(null)
@@ -8,7 +9,7 @@ const Search = ({ onSearchChange }) => {
         if (!inputValue) {
             return Promise.resolve({ options: [] });
         }
-
+        
         console.log("Searching for:", inputValue);
         
         return fetch(
@@ -30,7 +31,7 @@ const Search = ({ onSearchChange }) => {
             return {
                 options: response.map((city) => {
                     return {
-                        value: `${city.lon} ${city.lat}`,
+                        value: `${city.lon} ${city.lat}`, 
                         label: `${city.name}, ${city.country}`
                     }
                 })
