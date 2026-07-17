@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { AsyncPaginate } from 'react-select-async-paginate'
-import { GEOCODING_API_URL, WEATHER_API_KEY } from '../../api';
 
 const Search = ({ onSearchChange }) => {
     const [search, setSearch] = useState(null)
