@@ -31,7 +31,7 @@ const Search = ({ onSearchChange }) => {
             return {
                 options: response.map((city) => {
                     return {
-                        value: `${city.lat} ${city.lon}`,
+                        value: `${city.lon} ${city.lat}`,
                         label: `${city.name}, ${city.country}`
                     }
                 })
