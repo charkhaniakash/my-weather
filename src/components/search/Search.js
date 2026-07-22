@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { AsyncPaginate } from 'react-select-async-paginate'
+import { GEOCODING_API_URL, WEATHER_API_KEY } from './api'
 
-const Search = ({ onSearchChange }) => {
+const Search = ({ onSearchChange, handleSearch }) => {
     const [search, setSearch] = useState(null)
 
     const loadOptions = (inputValue) => {
@@ -46,6 +47,7 @@ const Search = ({ onSearchChange }) => {
         console.log("Selected city:", searchData);
         setSearch(searchData);
         onSearchChange(searchData);
+        handleSearch(searchData);
     }
 
     return (
