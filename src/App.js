@@ -9,9 +9,7 @@ import ForeCast from './components/forecast/ForeCast';
 
 
 function App() {
-  
-  const [currentWeather , setCurrentWeather] = useState(null)
-  const [forecast , setForeCast] = useState(null)   
+
   
   const handleSearch =(searchData)=>{
     const [lat, lon] = searchData.value.split(" ");
