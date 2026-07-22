@@ -1,18 +1,20 @@
 .title {
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 700;
+    margin-bottom: 10px;
   }
   
   .daily-item {
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    height: 40px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    height: 50px;
     margin: 5px;
     align-items: center;
     cursor: pointer;
     display: flex;
-    font-size: 14px;
-    padding: 5px 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
   }
   
   .icon-small {
@@ -39,15 +41,15 @@
   }
   
   .daily-details-grid {
-    grid-row-gap: 0;
+    grid-row-gap: 10px;
     grid-column-gap: 15px;
     -webkit-column-gap: 15px;
     column-gap: 15px;
     display: grid;
     flex: 1 1;
     grid-template-columns: auto auto;
-    padding: 5px 15px;
-    row-gap: 0;
+    padding: 10px 15px;
+    row-gap: 10px;
   }
   
   .daily-details-grid-item {
