@@ -2,12 +2,13 @@ import './App.css';
 import Search from './components/search/Search';
 import CurrentWeather from './components/current-weather/CurrentWeather';
 import {WEATHER_API_URL , WEATHER_API_KEY} from './api'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ForeCast from './components/forecast/ForeCast';
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForeCast] = useState(null);
+  const [searchData, setSearchData] = useState({});
 
   const handleSearch = async (searchValue) => {
     try {
